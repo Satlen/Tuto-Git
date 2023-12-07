@@ -1,2 +1,2 @@
 # Tuto-Git
-This my introduction cours for Git
+This is my introduction cours for Git
