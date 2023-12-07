@@ -1,0 +1,24 @@
+
+D' abord,
+- git log --oneline -p (le fichier en question) : là je peux voit ts les commits qui ont été faient sur ce fichier
+- git checkout (puis Id) pr revenir en arrière sur le commit. On ne peut rien modifier mais observer ce qui était comme spectateur
+- git checkout (id) puis (fichier): veut dire prend le fichier au moment de son commit. Ainsi, le fichier est récupérer tel qu' il était et a été stager. Ensuite - git commit -m (message): pr sauvegarder cette modification
+- git checkout master (fichier): pr revenir au présent ap avoir été en arrière avec - git checkout (Id) (fichier) et observer ce qui était. c' est un code permettant de voir l' état du fichier avant et de revenir à l' actualité. 
+- git revert (Id): permet de défaire un commit donc de revenir en arrière sur ce commit.
+- git reset (Id): pr supprimer ce qui a été fait avant ce Id. Mais ça revient au commit précédent ce id (en quittant la haut pr le bas ds l' historique) et le laisse en staging ce qui a été fait depuis (à voir avec git status) donc je peux remodifier l' historique  en faisant: "git add " et ensuite faire un commit avec git commit -m
+- git reset HEAD (fichier): pr déstager un fichier ou - git reset -- fichier: mm cmd que celle ci-dessus.
+- git add. : me demande si je dois stager les suppressions (ap avoir suppr un fichier dans mes dossiers par Ex ) et - git add --all: pr stager ce dernier.
+- git reset: pr suppr ts les stages en cours
+- git reset --hard: permet de revenir au dernier commit. Il est Ip de noter que cette action est irréversible.
+- On peut préciser le mode des reset: D' abord le symbol ^ autant de fois, dit le nombre de fois de commit qu' on veut revenir en arrière.
+    On en a 3:
+    - soft : git reset HEAD^ --soft = revient en arrière et laisse tt les modiff en staging
+    - mixed (par défaut):  git reset HEAD^ --mixed =
+    revient en arrière et laisse les modiff en dépot en attente de staging soit lors des modiff du dossier dans l' éditeur. Pour cela git commit -a -m (message)
+    - git reset HEAD^ --hard: revient en arrière et suppr tt les modiff faient depuis.
+
+En gros, les:
+- checkout ID: voir le commit avant comme spectateur
+- checkout ID fichier: ramène le fichier tel qui était à ce moment là. Et on pourra le stager puis commit.
+- revert ID: défaire un commit
+- revert ID fichier: défaire mes modiff apporter au fichier mais n' altère pas l' historique car écrit: inversion puis l' Id. 

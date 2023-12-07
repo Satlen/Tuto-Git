@@ -1,0 +1,22 @@
+
+- pwd: Affiche le dossier courant
+
+- mkdir: Créer un dossier
+
+- touch: créer un fichier
+
+- ls : permet de lister un dossier
+
+- cd : permet de remonter un dossier
+
+- cd.. : permet de se déplacer un dossier en arrière
+
+- cd puis le chemin complet vers le dossier.
+
+**************Les config
+
+- git config --global user.name
+
+- git config --global user.email
+
+- git config --list: permet de lister les config enregistrées pr Git.

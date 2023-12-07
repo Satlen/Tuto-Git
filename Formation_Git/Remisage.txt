@@ -1,0 +1,16 @@
+
+Le remisage permet de stocker des modifs instable que je ne voudrais pas commit pr mon projet.
+
+-* git stash : permet de stocker toutes les modifs apportées depuis le dernier commit.
+- Pr ajouter un nom au stash, je dis "git stash save (message)"
+    Les fichiers stashés; sont des fichiers déjà indexés.
+
+-* git stash show : pr afficher le contenu d' un stash. je précise le stash : stash@{1} suivi de "-p" pr voir le stash en detail. 
+
+-* git stash list: pr voir la liste des éléments stockés en stash
+
+-* git stash apply: ajoute tt les modifs  d'un stash au commit courant
+
+-* git git stash drop: pr effacer le dernier élément stocké en stash
+
+-* git stash branch (nom de la branche): Pr créer une branch à partir d'un stash.

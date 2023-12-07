@@ -1,0 +1,30 @@
+
+***** Créer un dépot distant:
+    Permet de sécuriser, d' uploader 
+et de travailler à plusieurs sur nos projets.
+
+D' abord, on crée un dépot ou repo distant soit dans github, une clé ou un autre dossier.
+    Dans un autre dossier, Je crée d' abord le dossier, ici: "remote-repo" et je l' initialise mais avec la cmd: "git init --bare". Ensuite, je copie l' adresse de ce repo pr pouvoir relier ce repo remote et mon projet.
+Dans mon projet, je vérifie les dépot remote lié par : "git remote". Ensuite, j' ajoute ce depot remote à mon projet par la cmd: "git remote add (le nom que j' attribue à ce remote; origin par défaut) puis (l' adresse de ce remote)".
+De là, j' ai ajouté mon repo distant à mon repo local.
+    Ensuite je push ma branche master dans mon dépot remote en tapant la cmd: "git push (où ?, ici origin) (quoi ?, master)". Ainsi, tout est envoyé à la branche master du repo distant.
+
+    Je peux donner l' adresse de mon repo distant à un autre utilisateur (2e) qui pourra le cloner et travailler là-dessus.
+
+        Ce dernier fait un "git clone (l' adresse)". Ainsi, il va se créer un nouveau dossier avec le meme nom (origin) et pr que le dossier soit créer dans le dossier, il ajoute "." à la fin pr dire, de le faire dans le dossier courant soit de prendre le meme dossier.
+        Ensuite il crée une nouvelle branche sur laquelle il switch et fait ses modiffs puis à la fin, push cette nouvelle branche dans le repo remote dont il a l' adresse soit "git push origin (nouvelle branche)".
+    
+Le 1er utilisateur que je suis, va donc télécharger soit "pull" cette nouvelle branche de l' utilisateur 2 pr pouvoir faire le merge.
+    Si je le fais directement, ça va pull cette branche sur ma branche master et là n' est pas l' objectif. Car, ça va mettre directement à jour la branche master. 
+    Je vais de ce fait créer aussi une nouvelle branche (ici, navigation) à partir de laquelle je vais télécharger (pull) la navigation de 2e utilisateur où ? sur mon dépot distant (origin car celà y avait été ajouté par le 2e utilisateur) quoi ? la branche navigation qui a été envoyé par le 2e utilisateur. De là, je part sur ma branche master et je fais le merge de cette branche avec ma branche navigation. 
+    Mon master contient donc maintenant le travail du 2e utilisateur ajouté au mien.
+    je peux le faire directement par la cmd: "git switch -c navigation pull origin/navigation" (pr dire faut switcher sur ma branche navigation et si ça n' existe pas, faut la créer puis tu pull de origine la branche navigation qui y a été ajoutée par le 2e utilisateur.)
+        Je push donc ma branche master dans le remote pr qu' elle soit aussi à jour dans le repo remote. Le 2e utilisateur lui, fait un pull du master dans mon remote pr mettre à jour sa branche master. Ceçi, il le fait dans sa branche master pr la mettre à jour directement soit "git pull origin master".
+
+        Le 3e utilisateur quant à lui,  initialise son repo "git init" dans un dossier; ensuite crée son repo local qu' il lie avec mon repo distant "git remote add origin[origin ici, est le nom qu' il donne aussi à son repo local.] (l' adresse de mon repo du meme nom) et pull dans ce repo local ma branche master. Ainsi, sa branche master est aussi à jour.  
+
+
+
+
+      
+ 

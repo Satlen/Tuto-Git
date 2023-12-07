@@ -1,0 +1,23 @@
+
+
+**** Le concept ici, est la création de nouveau branche et leur fusion.
+    Pour créer une branche, on tape:
+    "git branch (le Nom de la branche)* et pr passer d' une branche à une autre o fait un switch soit: " git switch (le nom de la branche)".
+    - On peut aussi créer de branch avec le code: "git checkout -b" mais ici, on switch en meme temps vers cette branche.
+    - et changer le nom de la branche princi qui est de base master en faisant : "git branch -M " ou changeant le param dans les config ap git config --list.
+Le "git branch" nous montre la branche sur laquelle on est.
+
+On a 2 approches :
+
+-* le merge
+
+    Ici, on passe sur la 2e branche et on apporte nos modifications qui n' appartiennent qu' a cette branche. De meme quand je passe sur la branche master, les modiffs apportées n' appartiennent qu' à cette branche.
+    %ais en sachant que la 2e branche est la suite de la branche master auquelle j' ai apporté des modifs.
+Ainsi, à la fin je viens sur la branche master et je fais un "git merge 2e branch" pour ajouter les modiffs de la 2e branche à la branche master.
+
+-* rebase:
+
+    Ici, j' apporte toutes les modiffs sur la 2e branche et à la fin, tjr sur la 2e branche, je fais un : " git rebase master".
+Ainsi, j' ajoute tt les modiffs de la 2e branche à la branche master.
+
+**** La # entre les 2 approches est que : avec le merge, le master et la 2e branche ne sont pas au meme niveau de commit amors que pr le rebase, les 2 sont au meme niveau.

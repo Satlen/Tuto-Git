@@ -1,0 +1,29 @@
+
+1- je crée d' abord un dossier
+Je le fais dans "Dossier" puis à l' int je cherche le dossier Lab par Ex:
+ - cd /Site/Lab !: cd = pr se rendre dans un dossier
+ - mkdir : pr créer un nvo dossier
+ - git init : pr initialiser le versionning (ap m' etre rendu ds le dossier)
+
+ 2- La configuration
+ - user.email et .name permet l' identification dans le versionning. Mais d' abord: git config --global
+ - color.ui: true = pr ajouter des couleurs
+ - git config --list: pr connaitre l' état de la config
+ - touch: pr créer un nvo fichier
+ - git status: me donne l' état de mon commit
+ - git config --global -e: pr afficher les config dans l' éditeur
+ - staging state: zone de staging, zone en attente du prochain commit pr apporter les mise à jour. On y ajoute des fichiers par: git add (puis le nom du fichier). Donc, j' ai stagé le fichier (je l'ai mis en attente de commit). c' est les fichiers traqués auquels on applique le commit et ces fichiers sont traqués ap "git add" 
+ - J' utilise soit l' éditeur pr le commit ou la cmd: git commit -m (puis le message pr modifier le fichier)
+ - git commit -a: pr faire directement un commit à partir des modiff de l' éditeur, en tapant le code suivant: git commit -a -m (le message) 
+ - La méthode git commit -m (message) est utilisée pr faire un commit quand on passe par "git add" puis on passe par cette méthode pr commit. 
+ - git add "*.html": (raccourcie pr stager ts les fichiers qui se termine par .html) ou git add --all
+ - Je crée un fichier (avc touch) .gitIgnore dans lequel j' ajoute dans l' éditeur ou autres moyens les fichiers à ignorer ie à ne pas traqué. 
+ - git log: montre les derniers commit; 
+ - git log n-2: montre les 2 derniers commit
+ - git log --oneline : montre en raccourcie, les commits
+ - git log -p (nom du fichier): pr montrer les commits qui concernent un fichier
+ - git diff: montre la diff entre un commit et les précédents
+ - 
+
+
+

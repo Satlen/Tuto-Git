@@ -1,0 +1,46 @@
+
+- Dépot git: c' est d' utiliser un dosssier contenant notre projet puis le transformer en dépot avec git init. Il se crée alors un dossier caché .git qui contient l' historique, la zone d' index (zone tampon entre les modifs local de mon projet et l' enregistrement de ces modifications dans l' historique de ) et autres modif de mon projet git. On distingue: la zone de travail, d' indexation et de dépot local. AInsi, d' abord on a les modifs de notre project dans le workspace mais ces dernières ne sont pas trackées ensuite, on ajoute ces fichiers contenant les modif dans la zone d' indexation pr dire que c' est ces modifications qu' on veut soumettre au dépot git soit dans le .git pr enregistrer l' historique de notre projet. 
+
+*********** - Le workspace ou zone de travail est la racine du dossier contenant notre dépot Git (.git). Les fichiers du dossier initialisé comme dépot constituent notre workspace. Le dossier .git à l' intérieur contient les infos de notre dépot.
+
+- Le git status: nous donne l' état actuel de notre workspace. 
+Ainsi, on a ajouté de nouveau fichier à notre workspace (projet) détecté par git mais il ne connait pas ses fichiers car ils ne sont pas ajoutés dans le dépot.
+
+************ Ensuite, il faut indexation
+
+-* git add: Elle permet l' indexation et prend comme param la liste des fichiers qui contiennent les modifs qu' on souhaitent enregistrer auprès de notre dépot.
+    On le vérifie par git status, qui cette fois-ci nous dit que ces fichiers sont pret pr le commit.
+On peut toutefois dé-indexer des fichiers indexer auparavant. 
+
+-* git reset (nom du fichier)
+
+-* git add . : Mettre toutes les modif du workspace dans la zone d' index.
+
+
+********* Enfin le commit
+    Il prend toutes les modifs de la zone d' index et les enregistres sous forme d' un commit dans le dépot local. Le commit contient entre autres, les modif qui sont faites.
+
+-* git commit -m (message: permettant d' indiquer ce que va apporter mon commit à mon projet)
+    Le git status me dira alors que mon espace de travail est vide.
+-* On peut aussi faire un commit direct avec la comd:
+"git commit -a -m " mais ceçi, ne se fait que lorsque mon fichier est déjà connu ie indexer.
+
+****** En gros, cet enregistrement se fait en 3 étapes:
+- Réaliser les modifs ds le projet
+- Indexer ces modifications ds une zone temporaire qui permet de regrouper nos modifs et de les sélectionner.
+- Le commit qui est le regroupement de toutes ces modifictions en un seul et meme paquet qu' on appelle commit qui est lui meme enregistré dans l' historique de notre dépot.
+
+
+******* LES MODIFS
+
+D' abord ap commit, puis modif,
+
+-* git status: me dit que mon fichier a été modifié mais non tracké.
+
+-* git diff: afffiche toutes les modifs du workspace soit les diff par rapport à la dernière version enregistrée dans le dépot. Donc les modiffs depuis le dernier commit.
+
+-* git diff --cached: pr afficher les modiffs apporter ds la zone d' indexage.
+
+-* git log: pr voir mes # commits. On peut utiliser: git log --oneline : pr afficher tous les commits en racourcie.
+
+-* git diff Id(1commit) Id(2commit): pr voir la # entre ces 2 commits.

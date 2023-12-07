@@ -1,0 +1,21 @@
+
+
+ On peut se balader dans l' historique de notre dépot Git.
+
+ D' abord, on a un oeil soit le "HEAD" dans notre dépot git qui de qui visualise l' historique de notre dépot et est de base au niveau du master soit là où mon projet est l' instant T.
+
+ ******* checkout: jeter un coup d' oeil
+
+ -* git checkout: permet de jeter un coup d' oeil sur un commit antérieur pr voir ce qui était.
+ J' ai qu' a préciser l' Id du commit et le HEAD, se dirigera vers le commit en question. Ainsi, je peux voir sans les modifier, l' état de mon projet à cet instant.
+
+ -* git checkout master: me permet de revenir à mon état normal à l' instant présent.
+
+ ******* reset
+ Princi, on a 2 reset le soft et le hard
+
+ -* git reset --soft (Id): permet d' effacer tous les commits précédent l' Id mais garde toutes les modiffs qui étaient faites avant le reset. c' est un peu comme ci le dernier commit remonte à l' Id et des modifications ont été faites depuis mais ne sont pas indexer.
+        Je peux effacer ces modiffs en faisant un "git restore" qui va me remettre au niveau de l' Id sans les modiffs.
+
+-* git reset --hard (Id): Ici, on éfface tous les commit précédents l' Id (en allant de la haut vers le bas) sans meme garder les modifications apportées.
+
