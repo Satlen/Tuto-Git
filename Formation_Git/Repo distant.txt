@@ -5,8 +5,9 @@ et de travailler à plusieurs sur nos projets.
 
 D' abord, on crée un dépot ou repo distant soit dans github, une clé ou un autre dossier.
     Dans un autre dossier, Je crée d' abord le dossier, ici: "remote-repo" et je l' initialise mais avec la cmd: "git init --bare". Ensuite, je copie l' adresse de ce repo pr pouvoir relier ce repo remote et mon projet.
-Dans mon projet, je vérifie les dépot remote lié par : "git remote". Ensuite, j' ajoute ce depot remote à mon projet par la cmd: "git remote add (le nom que j' attribue à ce remote; origin par défaut) puis (l' adresse de ce remote)".
-De là, j' ai ajouté mon repo distant à mon repo local.
+Dans mon projet, je vérifie les dépot remote lié par : "git remote" ou "git remote -v". Ensuite, j' ajoute ce depot remote à mon projet par la cmd: "git remote add (le nom que j' attribue à ce remote; origin par défaut) puis (l' adresse de ce remote)".
+De là, j' ai ajouté mon repo distant à mon repo local donc mon projet.
+Je peux changer le nom atttribué au repo distant en dans mon projet en faisant: "git remote rename quoi ? (l' ancien nom) puis (le nouveau nom)
     Ensuite je push ma branche master dans mon dépot remote en tapant la cmd: "git push (où ?, ici origin) (quoi ?, master)". Ainsi, tout est envoyé à la branche master du repo distant.
 
     Je peux donner l' adresse de mon repo distant à un autre utilisateur (2e) qui pourra le cloner et travailler là-dessus.

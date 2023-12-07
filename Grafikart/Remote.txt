@@ -1,0 +1,24 @@
+
+   - Je crée un dépot remote (distant) par la cmd: "git init --bare" dans un nouveau dossier : dépo-remote par Ex.
+
+   - Je l' ajoute à mon projet par la cmd: "git remote add (le nom que j' attribue au remote) puis (l' adresse) que je peux trouver en allant dans le dossier sur le pc puis dans la barre d' affichage pour copier l' adresse.
+   Le --bare : dit que c' est un dépot git qui n' aura pas de dossier de travail.
+   - Pr supprimer un remote, on fait : "git remote remove Origin".
+
+   - Dans mon projet, je fais "git remote -v" pr avoir la liste des différents remotes liés à mon projet. Ensuite, "git remote add (nom, origin par défaut) puis (l' adresse) pr lié le remote à mon projet.
+   
+   - Pour envoyer mes modifications dans le remote: "git push (où on veut envoyer) puis (la branche qu' on veut envoyer). Ainsi, je peux envoyer n' importe quelle branhe dans le remote. 
+
+   - Pour effacer une branche dans mon projet: "git branch -d (nom de la branche)" et "git push où (origin) --delete (nom de la branche distante)" : pr effacer une branche distante. 
+
+   - La cmd: "git branch -r" c'est pr voir la liste des branches présentes dans mon remote soit les branches distantes.
+
+    - Pr récupérer les nouveaux commit qui ont été fait sur le remote origin et sur la branche master : "git pull origin master".
+
+    - push et pull: l' une permet d' envoyer et l' autre de récupérer
+
+    ******* - Ensuite, si une troisième personne voulant travailler,
+    - "git clone (l' adresse) puis (le nom que qu'il veux donner au dossier). Ainsi, il accède à tous les commits et peut apporter ses modifications puis "push origin quoi? (sa branche master)"
+        Le Origin devient donc en avance par rapport à ma branche master. Ainsi, je ne peux plus envoyer mes nouvelles modifs sur Origin sans avoir mis à jour ma branche qui doit faire l' envoie. Ainsi, je fais d' abord: "git pull Origin master" pr mettre à jour ma branche par rapport au repo distant. C' estpr éviter que ça mette à jour directement ma branche master, que je switch avant de faire le pull. Ainsi, je peux voir les modifs apportés sur le switch par rapport à ma branche master. Cette méthode de pull, fait un merge (fusion). Je peux aussi faire un rebase avant le push en faisant :"git pull --rebase origin master". Elle permet d' avoir un historique plus propre,  ie ajoute mes commit avant tous les commits qui ont été fait auparavant. En gros, le rebase affiche les commits faient dans mon projet avant ou au dessus de (de la haut vers le bas) ceux de Origin soit mes commits en dernier.
+
+    - Pour un rebase automatique lors des pull, je fais : "git config --global branch.autosetuprebase always" 
